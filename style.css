@@ -1,0 +1,159 @@
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* my style */
+
+body {
+    background-color: aliceblue;
+    font-family: cursive;
+    font-size: 16px;
+    color: darkgray;
+}
+
+/* container */
+div.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    margin-top: .5em;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.701);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 1px;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 1px 1px black;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.491);
+}
+
+div.hero {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    background-image: url("hero.jpeg");
+    background-size: cover;
+    margin-top: 7px;
+}
+
+/* prodak */
+h2 {
+    color: rgba(60, 60, 58, 0.815);
+    text-shadow: 3px 2px 1px rgba(10, 0, 0, 0.486);
+    margin: 28px;
+    font-size: 1.8em;
+}
+
+div.prodak {
+    width: 85%;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+    gap: 1em .3em;
+    color: rgba(0, 0, 0, 0.691);
+}
+
+div.prodak a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 200px;
+    width: 100%;
+    height: 10%;
+    color: aliceblue;
+    background-color: rgb(7, 233, 7);
+    border-radius: 10px;
+    margin: 5px 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* responsif */
+/* HP lebar ke atas */
+@media (min-width: 640px) {
+    div.hero {
+        background-position: 10px -450px;
+    }
+
+    div.prodak{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3em 1em ;
+    }
+}
+
+/* Laptop ke atas */
+@media (min-width: 1024px) {
+    div.hero {
+        background-position: -5px -890px;
+    }
+
+    div.prodak{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3em 1em ;
+    }
+}
